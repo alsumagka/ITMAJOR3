@@ -1,0 +1,104 @@
+ScreenManager:
+    id: color
+
+    Screen:
+        name: 'Main'
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: 30
+            spacing: 20
+            md_bg_color: 0.9, 0.9, 0.9, 1
+            MDLabel:
+                text: 'Choose a Color'
+                halign: 'center'
+                font_style: 'H4'
+                theme_text_color: 'Secondary'
+                size_hint_y: None
+                height: self.texture_size[1] + 20
+
+            MDBoxLayout:
+                spacing: 15
+                size_hint: None, None
+                size: self.minimum_size
+                pos_hint: {"center_x": 0.5}
+                
+                MDRaisedButton:
+                    text: 'Red'
+                    md_bg_color: 1, 0, 0, 1
+                    on_release: color.current = 'red'
+                    size_hint: None, None
+                    size: 100, 50
+
+                MDRaisedButton:
+                    text: 'Green'
+                    md_bg_color: 0, 1, 0, 1
+                    on_release: color.current = 'green'
+                    size_hint: None, None
+                    size: 100, 50
+
+                MDRaisedButton:
+                    text: 'Blue'
+                    md_bg_color: 0, 0, 1, 1
+                    on_release: color.current = 'blue'
+                    size_hint: None, None
+                    size: 100, 50
+
+    Screen:
+        name: 'red'
+        MDBoxLayout:
+            orientation: 'vertical'
+            md_bg_color: 1, 0, 0, 1
+            padding: 20
+            MDLabel:
+                text: 'Hi, I am Red'
+                font_style: 'H5'
+                halign: 'center'
+                theme_text_color: 'Primary'
+                size_hint_y: None
+                height: self.texture_size[1] + 20
+            MDRaisedButton:
+                text: 'Back'
+                size_hint: None, None
+                size: 100, 50
+                pos_hint: {"center_x": 0.5}
+                on_release: color.current = 'Main'
+
+    Screen:
+        name: 'green'
+        MDBoxLayout:
+            orientation: 'vertical'
+            md_bg_color: 0, 1, 0, 1
+            padding: 20
+            MDLabel:
+                text: 'Hi, I am Green'
+                font_style: 'H5'
+                halign: 'center'
+                theme_text_color: 'Primary'
+                size_hint_y: None
+                height: self.texture_size[1] + 20
+            MDRaisedButton:
+                text: 'Back'
+                size_hint: None, None
+                size: 100, 50
+                pos_hint: {"center_x": 0.5}
+                on_release: color.current = 'Main'
+
+    Screen:
+        name: 'blue'
+        MDBoxLayout:
+            orientation: 'vertical'
+            md_bg_color: 0, 0, 1, 1
+            padding: 20
+            MDLabel:
+                text: 'Hi, I am Blue'
+                font_style: 'H5'
+                halign: 'center'
+                theme_text_color: 'Primary'
+                size_hint_y: None
+                height: self.texture_size[1] + 20
+            MDRaisedButton:
+                text: 'Back'
+                size_hint: None, None
+                size: 100, 50
+                pos_hint: {"center_x": 0.5}
+                on_release: color.current = 'Main'
